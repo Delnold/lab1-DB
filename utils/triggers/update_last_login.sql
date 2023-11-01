@@ -1,0 +1,6 @@
+CREATE TRIGGER UpdateLastLoginTrigger
+BEFORE UPDATE ON Users
+FOR EACH ROW
+BEGIN
+    SET NEW.LastLogin = NOW();
+END;
